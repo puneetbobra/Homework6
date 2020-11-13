@@ -1,0 +1,4 @@
+Total word count: 6420
+Average word length is: 5.1
+
+Total character count: 1031394
