@@ -16,6 +16,13 @@ with out, book_file:
     count_of_words = lines.split()
     out.write(f'Total word count: {len(count_of_words)}\n')
 
+    #count the number of characters in the file excluding spaces and special characers
+    t = []    
+    for i in lines:   
+        #append the characters in list t, length of t will determine the total character count
+        t.append(i)     
+    out.write(f'Total character count: {len(t)}\n')
+
     #Average length of the words in the file
     total = 0
     for word in count_of_words:
@@ -24,20 +31,5 @@ with out, book_file:
     avg = total / len(count_of_words)
     out.write(f'Average word length is: {round(avg,2)}\n')
   
-    t = []
     
-    # populate all lower case characters of alphabets to check if all letters exist in the book or not
-    for j in range(97, 123):        
-        count = 0
-        # read the lines 
-        for i in lines:   
-            #if it is an alphabet then increase the count
-            if i == chr(j): count += 1
-
-            #append the characters in list t which would be used for checking if all alphabets exist or not
-            t.append(i) 
- 
-    #count the number of characters in the file excluding spaces
-    out.write(f'\nTotal character count: {len(t)}')
-
 #End
