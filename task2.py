@@ -23,21 +23,15 @@ try:
             if word in word_counts:
                 word_counts[word] += 1
             else:
-                #pass
                 word_counts[word] = 1
-        
-        #out.write(f'{"WORD":<12}COUNT\n')
-        
+                       
         for word, count in sorted(word_counts.items()):
             if word in all_alphabets:
                 out.write(f'{word.upper():<3} {count}\n')
-                #new.update({word})
             else: pass
 
         if all_alphabets.issubset(word_counts) == True:
             out.write('\nIt has all letters')
-        # elif all_alphabets.issubset(word_counts) == False:
-        #     ("\nIt doesn't have all letters")
         else: out.write("\nIt doesn't have all letters")
 
 except OSError:
