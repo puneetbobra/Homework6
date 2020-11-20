@@ -36,10 +36,11 @@ try:
 
         if all_alphabets.issubset(word_counts) == True:
             out.write('\nIt has all letters')
-        else: ("\nIt doesn't have all letters")
-
-#End
+        # elif all_alphabets.issubset(word_counts) == False:
+        #     ("\nIt doesn't have all letters")
+        else: out.write("\nIt doesn't have all letters")
 
 except OSError:
     print(f'Unable to open {FILENAME}')
-    # lines = book_file.read()   
+    
+#End
